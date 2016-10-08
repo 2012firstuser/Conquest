@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Conquest
 {
+   
     class Deck
     {
+        private List<Card> _deck;
+
+        public
+
     }
 }

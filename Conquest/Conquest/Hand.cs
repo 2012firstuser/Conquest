@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Conquest
 {
-    class Hand
+    public class Hand
     {
+        private List<Card> _cards = new List<Card>();
+
+        public void Discard()
+        {
+            _cards.RemoveAt();
+        }
     }
 }

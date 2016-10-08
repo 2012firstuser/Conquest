@@ -13,9 +13,14 @@ namespace Conquest
 
         };
 
-        public Ability GetAbility(string abilityName)
+        /// <summary>
+        /// Iterate through the _abilities and find requested ability by name.
+        /// </summary>
+        /// <param name="abilityName"></param>
+        /// <returns></returns>
+        public static Ability GetAbility(string abilityName)
         {
-
+            return _abilities.Find((a) => { return a.AbilityName == abilityName; });
         }
     }
 }

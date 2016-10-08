@@ -25,6 +25,22 @@ namespace Conquest
         /// </summary>
         public GameEventArgument.GameEvent CreatureDies;
 
+        private bool _invicable;
+        /// <summary>
+        /// Returns this creature's invincablitiy.
+        /// </summary>
+        public bool Invicable
+        {
+            get
+            {
+                return _invicable;
+            }
+            set
+            {
+                _invicable = value;
+            }
+        }
+
         private int _power;
         /// <summary>
         /// Returns this creature's power.

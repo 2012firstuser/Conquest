@@ -10,6 +10,7 @@ namespace Conquest
    
     public class Deck
     {
+        private Hand _hand;
         private List<Card> _deck = new List<Card>()
         {
             new Priest(),
@@ -31,9 +32,14 @@ namespace Conquest
             new Merchant(),
             new Merchant(),
             new Queen(),
-            new Queen(),
             new King(),
-            new King(),
+            new Templar(),
+            new Templar(),
+            new Noble(),
+            new Noble(),
+            new Paladin(),
+            new Paladin(),
+
         };
 
         /// <summary>
@@ -44,10 +50,7 @@ namespace Conquest
         /// </summary>
         public Deck()
         {
-            for(int i = 0; i < 10; i++)
-            {
-               
-            }   
+            _hand = new Hand(); 
         }
         /// <summary>
         /// Returns a random card from the deck and removes it

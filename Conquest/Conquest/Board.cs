@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace Conquest
 {
-    static class FightManager
+    class Board
     {
-
     }
 }

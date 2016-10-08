@@ -16,7 +16,7 @@ namespace Conquest
         {
             _deck = new Deck();
             _hand = new Hand();
-            _board = new Board(h, w);
+            //_board = new Board(h, w);
         }
 
 

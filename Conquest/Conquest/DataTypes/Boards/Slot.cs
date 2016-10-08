@@ -39,9 +39,9 @@ namespace Conquest
 
         GameObject _gameObject;
 
-        public Slot(Vector2 _position)
+        public Slot(Vector2 _position, Color color)
         {
-            _gameObject = new GameObject(AssetManager.GetTexture("Slot.PNG"), _position, new Vector2(0, 0), Color.White, new Vector2(0, 0));
+            _gameObject = new GameObject(AssetManager.GetTexture("Slot.PNG"), _position, new Vector2(1, 1), color, new Vector2(0, 0));
             DrawManager.AddToQueue(_gameObject);
         }
 

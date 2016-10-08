@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenTK;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -56,8 +57,24 @@ namespace Conquest
             }
         }
 
-        public Card(Type _type,List<Ability> _abilities = null)
+        public GameObject Obj
         {
+            get
+            {
+                return _obj;
+            }
+
+            set
+            {
+                _obj = value;
+            }
+        }
+
+        private GameObject _obj;
+
+        public Card(Type _type, GameObject _obj, List<Ability> _abilities = null)
+        {
+            this._obj = _obj;
             Type = _type;
             Abilities = _abilities;
             Power = (int)_type;

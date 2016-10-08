@@ -51,7 +51,9 @@ namespace Conquest
             GameObject obj = new GameObject(AssetManager.GetTexture("Slot.PNG"), new Vector2(0, 0), new Vector2(1, 1), System.Drawing.Color.Transparent, new Vector2(0, 0));
             //DrawManager.AddToQueue(obj);
 
-            Board board = new Board(3, 2);
+            Board board = new Board(Vector2.Zero, 2, 3, -1);
+
+            Board board2 = new Board(new Vector2(0,1600), 2, 3, 1);
         }
 
         protected override void OnUpdateFrame(FrameEventArgs e)

@@ -10,7 +10,7 @@ namespace Conquest
     {
         static void Main(string[] args)
         {
-            Game game = new Game(600,400);
+            Game game = new Game(1200,800);
             game.Run();
 
             

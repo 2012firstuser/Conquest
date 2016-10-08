@@ -97,22 +97,22 @@ namespace Conquest
 
         public void SetPosition(Vector2 _newPosition)
         {
-            _positionFrom = _position;
-            _position = _newPosition;
-            _positionGoto = _newPosition;
-            _tweenType = TweenType.Instant;
-            _currentStep = 0;
-            _tweenType = 0;
-        }
-
-        public void SetPosition(Vector2 _newPosition, TweenType type, int numSteps)
-        {
             _position = _newPosition;
             _positionFrom = _newPosition;
             _positionGoto = _newPosition;
             _tweenType = TweenType.Instant;
             _currentStep = 0;
-            _tweenType = 0;
+            _tweenSteps = 0;
+        }
+
+        public void SetPosition(Vector2 _newPosition, TweenType type, int numSteps)
+        {
+            _positionFrom = _position;
+            _position = _newPosition;
+            _positionGoto = _newPosition;
+            _tweenType = type;
+            _currentStep = 0;
+            _tweenSteps = numSteps;
         }
 
         public Vector2 ToWorld(Vector2 vector)

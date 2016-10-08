@@ -12,6 +12,23 @@ namespace Conquest
 {
     public class DrawManager
     {
+        private static List<GameObject> _drawQueue = new List<GameObject>();
+
+        public static void AddToQueue(GameObject obj)
+        {
+            _drawQueue.Add(obj);
+        }
+
+        public static void RemoveFromQueue(GameObject obj)
+        {
+            _drawQueue.Remove(obj);
+        }
+
+        public static void DrawQueue()
+        {
+            _drawQueue.ForEach((o) => { Draw(o.Texture2D, o.Position, o.Scale, o.Color, o.Origin); });
+        }
+
         public static void Draw(Texture2D texture, Vector2 position, Vector2 scale, Color color, Vector2 origin)
         {
             Vector2[] vertices = new Vector2[4]
@@ -26,7 +43,7 @@ namespace Conquest
 
             GL.Begin(PrimitiveType.Quads);
 
-            GL.Color3(color);
+            //GL.Color3(color);
 
             for (int i = 0; i < 4; i++)
             {

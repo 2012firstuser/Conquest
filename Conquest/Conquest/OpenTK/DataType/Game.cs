@@ -6,22 +6,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using System.IO;
+
 namespace Conquest
 {
     public class Game : GameWindow
     {
-        Dictionary<string, Texture2D> _textures;
-        List<GameObject> _drawQueue;
         Camera _camera;
+
+        string ASSETS_PATH = Environment.CurrentDirectory + "\\Assets\\";
 
         public Game(int width, int height)
             : base(width, height)
         {
             GL.Enable(EnableCap.Texture2D);
-
+            
             _camera = new Camera(Vector2.Zero, 1.0, 0.0);
 
-            Mouse.ButtonDown += Mouse_ButtonDown;
+            MouseDown += Mouse_ButtonDown;
         }
 
         private void Mouse_ButtonDown(object sender, OpenTK.Input.MouseButtonEventArgs e)
@@ -37,10 +39,19 @@ namespace Conquest
         {
             base.OnLoad(e);
 
-            throw new NotImplementedException("need to impl");
-            KeyValuePair<string, Texture2D> pair = AssetManager.LoadTexture("");
+            string[] paths = Directory.GetFiles(ASSETS_PATH);
 
-            _textures.Add(pair.Key, pair.Value);
+            paths.ToList().ForEach((s) =>
+            {
+                KeyValuePair<string, Texture2D> pair = AssetManager.LoadTexture(s);
+
+                AssetManager.AddTexture(pair.Key, pair.Value);
+            });
+            
+            GameObject obj = new GameObject(AssetManager.GetTexture("Slot.PNG"), new Vector2(0, 0), new Vector2(1, 1), System.Drawing.Color.Transparent, new Vector2(0, 0));
+            //DrawManager.AddToQueue(obj);
+
+            Board board = new Board(3, 2);
         }
 
         protected override void OnUpdateFrame(FrameEventArgs e)
@@ -59,7 +70,7 @@ namespace Conquest
             DrawManager.Begin(this.Width, this.Height);
             _camera.ApplyTransform();
 
-            _drawQueue.ForEach((g) => { DrawManager.Draw(g.Texture2D, g.Position, g.Scale, g.Color, new Vector2(0, 0)); });
+            DrawManager.DrawQueue();
 
             this.SwapBuffers();
         }

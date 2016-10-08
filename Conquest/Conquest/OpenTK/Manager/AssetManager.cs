@@ -14,6 +14,18 @@ namespace Conquest
 {
     public class AssetManager
     {
+        private static Dictionary<string, Texture2D> _textures = new Dictionary<string, Texture2D>();
+
+        public static Texture2D GetTexture(string name)
+        {
+            return _textures[name];
+        }
+
+        public static void AddTexture(string name, Texture2D texture)
+        {
+            _textures.Add(name, texture);
+        }
+
         public static KeyValuePair<string, Texture2D> LoadTexture(string path)
         {
             if (!File.Exists(path))

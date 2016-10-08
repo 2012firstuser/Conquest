@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 
+using OpenTK;
+
 namespace Conquest
 {
     class Board
@@ -18,7 +20,7 @@ namespace Conquest
             {
                 for( int j = 0; j < w; j++)
                 {
-                    _board[i, j] = new Slot();
+                    _board[i, j] = new Slot(new Vector2(i,j));
                 }
             }
         }

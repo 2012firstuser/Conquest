@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Conquest
 {
-    private class Creature
+    public class Creature
     {
         private int _power;
         /// <summary>

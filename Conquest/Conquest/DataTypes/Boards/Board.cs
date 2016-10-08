@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace Conquest
 {
@@ -15,10 +16,10 @@ namespace Conquest
             _board = new Slot[h, w];
         }
 
-//        public void PlaceCard(Point)
-//        {
-
-//        }
+        public void PlaceCreature(Point p, Creature _creature)
+        {
+             P
+        }
 
     }
 }

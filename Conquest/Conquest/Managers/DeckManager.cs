@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Conquest
 {
-    class DeckManager
+    public static class DeckManager
     {
+        List<Deck> 
     }
 }

@@ -8,5 +8,8 @@ namespace Conquest
 {
     public class Player
     {
+        Deck _deck;
+        Hand _hand;
+        Board _board;
     }
 }

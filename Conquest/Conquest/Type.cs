@@ -8,6 +8,17 @@ namespace Conquest
 {
     public enum Type
     {
-        creature,spell
+        priest,
+        peasant,
+        foot_soldier,
+        merchant,
+        noble,
+        assasin,
+        knight,
+        templar,
+        paladin,
+        commander,
+        royalty
     }
+    
 }

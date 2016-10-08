@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="OpenTK">
+      <HintPath>..\..\..\..\..\Documents\OpenTK\1.1\Binaries\OpenTK\Release\OpenTK.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -61,6 +64,8 @@
     <Compile Include="Managers\HandManager.cs" />
     <Compile Include="Managers\PlayerManager.cs" />
     <Compile Include="Managers\Util.cs" />
+    <Compile Include="OpenTK\DataType\Game.cs" />
+    <Compile Include="OpenTK\Manager\AssetManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

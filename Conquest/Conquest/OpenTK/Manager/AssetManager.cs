@@ -4,14 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using OpenTK;
+using OpenTK.Graphics.OpenGL;
+
 namespace Conquest
 {
-    class Program
+    public class AssetManager
     {
-        static void Main(string[] args)
-        {
-            Game game = new Game(600,400);
-            game.Run();
-        }
     }
 }

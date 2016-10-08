@@ -22,5 +22,14 @@ namespace Conquest
         {
             return _abilities.Find((a) => { return a.AbilityName == abilityName; });
         }
+
+        public static void BindAbilitiy(Creature creature, Ability ability)
+        {
+            creature.Abilities.Add(ability);
+
+            creature.CreatureAttacks += ability.HandleCreatureAttacks;
+            creature.CreatureDies += ability.HandleCreatureDies;
+            creature.CreatureIsAttacked += ability.
+        }
     }
 }

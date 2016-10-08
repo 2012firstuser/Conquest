@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace Conquest
 {
-    class AbilityManager
+    static class AbilityManager
     {
+        private static List<Ability> _abilities = new List<Ability>()
+        {
+
+        };
+
+        public Ability GetAbility(string abilityName)
+        {
+
+        }
     }
 }

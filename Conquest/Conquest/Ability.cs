@@ -21,6 +21,19 @@ namespace Conquest
             }
         }
 
+        private string _abilityName;
+        public string AbilityName
+        {
+            get
+            {
+
+            }
+            set
+            {
+
+            }
+        }
+
         public Ability()
         {
 

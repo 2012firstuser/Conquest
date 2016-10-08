@@ -12,6 +12,10 @@ namespace Conquest
         {
             Game game = new Game(600,400);
             game.Run();
+
+            
+
+
         }
     }
 }

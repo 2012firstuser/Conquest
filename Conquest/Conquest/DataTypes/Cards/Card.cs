@@ -28,7 +28,7 @@ namespace Conquest
         /// <summary>
         /// Returns this card abilities.
         /// </summary>
-        private List<Ability> Abilities
+        protected internal List<Ability> Abilities
         {
             get
             {
@@ -73,7 +73,7 @@ namespace Conquest
         }
 
         /// <summary>
-        /// Called when a card is discarded.
+        /// Called when this card is discarded.
         /// </summary>
         public virtual void Discard()
         {

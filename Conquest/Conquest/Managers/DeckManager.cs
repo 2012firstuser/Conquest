@@ -15,7 +15,7 @@ namespace Conquest
 
         public static Deck GetDeck()
         {
-
+            
         }
 
         public static void AddDeck(Deck deck)
@@ -27,6 +27,5 @@ namespace Conquest
         {
             _decks.Remove(deck);
         }
->>>>>>> origin/master
     }
 }

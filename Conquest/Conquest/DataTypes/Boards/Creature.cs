@@ -51,7 +51,7 @@ namespace Conquest
             {
                 return _power;
             }
-            private set
+            protected internal set
             {
                 _power = value;
             }
@@ -67,10 +67,14 @@ namespace Conquest
             {
                 return _abitities;
             }
-            private set
+            protected internal set
             {
                 _abitities = value;
             }
+        }
+        public Creature()
+        {
+
         }
     }
 }

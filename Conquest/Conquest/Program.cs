@@ -10,6 +10,7 @@ namespace Conquest
     {
         static void Main(string[] args)
         {
+            //TEST
         }
     }
 }

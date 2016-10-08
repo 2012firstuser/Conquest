@@ -18,7 +18,6 @@ namespace Conquest
         templar,
         paladin,
         commander,
-        royalty
+        royalty = 0
     }
-    
 }

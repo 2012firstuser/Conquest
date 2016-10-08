@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Conquest.DataTypes.Cards.Implemented;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,31 @@ namespace Conquest
    
     public class Deck
     {
-        private List<Card> _deck;
+        private List<Card> _deck = new List<Card>()
+        {
+            new Priest(),
+            new Priest(),
+            new Peasant(),
+            new Peasant(),
+            new FootSoldier(),
+            new FootSoldier(),
+            new Assassin(),
+            new Assassin(),
+            new Commander(),
+            new Commander(),
+            new Jack(),
+            new Jack(),
+            new Jack(),
+            new Jack(),
+            new Knight(),
+            new Knight(),
+            new Merchant(),
+            new Merchant(),
+            new Queen(),
+            new Queen(),
+            new King(),
+            new King(),
+        };
 
         /// <summary>
         /// Creates a deck with 26 cards

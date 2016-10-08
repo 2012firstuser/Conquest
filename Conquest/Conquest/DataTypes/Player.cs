@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Conquest
 {
-    class Player
+    public class Player
     {
     }
 }

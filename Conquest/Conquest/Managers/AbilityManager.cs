@@ -23,13 +23,34 @@ namespace Conquest
             return _abilities.Find((a) => { return a.AbilityName == abilityName; });
         }
 
+        /// <summary>
+        /// Binds the given ability to the creature.
+        /// </summary>
+        /// <param name="creature">Target creature</param>
+        /// <param name="ability">Target ability</param>
         public static void BindAbilitiy(Creature creature, Ability ability)
         {
             creature.Abilities.Add(ability);
 
             creature.CreatureAttacks += ability.HandleCreatureAttacks;
             creature.CreatureDies += ability.HandleCreatureDies;
-            creature.CreatureIsAttacked += ability.
+            creature.CreatureIsAttacked += ability.HandleCreatureIsAttacked;
+            creature.CreatureMoved += ability.HandleCreatureMoves;
+        }
+
+        /// <summary>
+        /// Unbinds the given ability from the creature.
+        /// </summary>
+        /// <param name="creature">Target creature</param>
+        /// <param name="ability">Target ability</param>
+        public static void UnbindAbility(Creature creature, Ability ability)
+        {
+            creature.Abilities.Remove(ability);
+
+            creature.CreatureAttacks -= ability.HandleCreatureAttacks;
+            creature.CreatureDies -= ability.HandleCreatureDies;
+            creature.CreatureIsAttacked -= ability.HandleCreatureIsAttacked;
+            creature.CreatureMoved -= ability.HandleCreatureMoves;
         }
     }
 }

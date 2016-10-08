@@ -33,9 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="OpenTK, Version=2.0.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
-      <HintPath>..\packages\OpenTK.2.0.0\lib\net20\OpenTK.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="OpenTK">
+      <HintPath>..\..\..\..\..\Documents\OpenTK\1.1\Binaries\OpenTK\Release\OpenTK.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -48,7 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataTypes\Abilities\Invicibilty.cs" />
     <Compile Include="DataTypes\Ability.cs" />
     <Compile Include="DataTypes\Boards\Board.cs" />
     <Compile Include="DataTypes\Boards\Creature.cs" />
@@ -64,18 +62,19 @@
     <Compile Include="Managers\DeckManager.cs" />
     <Compile Include="Managers\FightManager.cs" />
     <Compile Include="Managers\HandManager.cs" />
-    <Compile Include="Managers\LanManager.cs" />
     <Compile Include="Managers\PlayerManager.cs" />
     <Compile Include="Managers\Util.cs" />
+    <Compile Include="OpenTK\DataType\Camera.cs" />
     <Compile Include="OpenTK\DataType\Game.cs" />
+    <Compile Include="OpenTK\DataType\GameObject.cs" />
+    <Compile Include="OpenTK\DataType\Texture2D.cs" />
     <Compile Include="OpenTK\Manager\AssetManager.cs" />
+    <Compile Include="OpenTK\Manager\DrawManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="OpenTK.dll.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -15,7 +15,7 @@ namespace Conquest
 
         public static Deck GetDeck()
         {
-            
+            return null;
         }
 
         public static void AddDeck(Deck deck)

@@ -25,12 +25,12 @@ namespace Conquest
 
         public void PlaceCreature(Point p, Creature _creature)
         {
-            _board[p.X, p.y] = _creature;
+            _board[p.X, p.Y].Creature = _creature;
         }
         
         public Creature GetCreature(Point p)
         {
-            return _board[p.X, p.Y].Get();
+            return _board[p.X, p.Y].Creature;
         }   
         
 

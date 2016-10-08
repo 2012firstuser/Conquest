@@ -39,9 +39,8 @@ namespace Conquest
                 return 2;
             if (a.Power > b.Power)
                 return 0;
-            else (b.Power > a.Power)
+            else
                 return 1;
-            return null;
         }
     }
 }

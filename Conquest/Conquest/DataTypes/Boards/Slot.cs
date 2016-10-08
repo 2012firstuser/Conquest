@@ -10,6 +10,17 @@ namespace Conquest
     class Slot
     {
         Creature _creature = null;
+        public Creature Creature
+        {
+            get
+            {
+                return _creature;
+            }
+            set
+            {
+                _creature = Creature;
+            }
+        }
         public Slot() { }
 
         public void DeleteCreature()
@@ -17,15 +28,6 @@ namespace Conquest
             _creature = null;
         }
 
-        public void AddCreature(Creature c)
-        {
-            _creature = c;
-        }
-
-        public Creature Get()
-        {
-            return _creature;
-        }
 
 
     }

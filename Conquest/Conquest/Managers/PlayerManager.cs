@@ -8,5 +8,6 @@ namespace Conquest
 {
     class PlayerManager
     {
+
     }
 }

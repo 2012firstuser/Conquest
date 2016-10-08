@@ -8,6 +8,6 @@ namespace Conquest
 {
     public static class DeckManager
     {
-        List<Deck> 
+        List<Deck> bob;
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Conquest
 {
    
-    class Deck
+    public class Deck
     {
         private List<Card> _deck;
 

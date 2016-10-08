@@ -45,29 +45,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataTypes\Ability.cs" />
-    <Compile Include="DataTypes\Events\GameEventArgument.cs" />
-    <Compile Include="Managers\AbilityManager.cs" />
     <Compile Include="DataTypes\Boards\Board.cs" />
-    <Compile Include="Managers\BoardManager.cs" />
-    <Compile Include="DataTypes\Cards\Card.cs" />
     <Compile Include="DataTypes\Boards\Creature.cs" />
+    <Compile Include="DataTypes\Boards\Slot.cs" />
+    <Compile Include="DataTypes\Cards\Card.cs" />
     <Compile Include="DataTypes\Cards\Deck.cs" />
+    <Compile Include="DataTypes\Cards\Hand.cs" />
+    <Compile Include="DataTypes\Events\GameEventArgument.cs" />
+    <Compile Include="DataTypes\Player.cs" />
+    <Compile Include="DataTypes\Type.cs" />
+    <Compile Include="Managers\AbilityManager.cs" />
+    <Compile Include="Managers\BoardManager.cs" />
     <Compile Include="Managers\DeckManager.cs" />
     <Compile Include="Managers\FightManager.cs" />
-    <Compile Include="DataTypes\Cards\Hand.cs" />
     <Compile Include="Managers\HandManager.cs" />
-    <Compile Include="DataTypes\Player.cs" />
     <Compile Include="Managers\PlayerManager.cs" />
+    <Compile Include="Managers\Util.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="DataTypes\Boards\Slot.cs" />
-    <Compile Include="DataTypes\Type.cs" />
-    <Compile Include="Managers\Util.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
